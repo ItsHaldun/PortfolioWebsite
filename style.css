@@ -21,9 +21,6 @@ p {
 }
 
  /* Link Styles */
-a {
-
-}
 a:link {color:white;}
 a:visited {color:yellow;}
 a:hover {color:purple;}
