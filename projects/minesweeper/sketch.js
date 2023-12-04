@@ -31,7 +31,7 @@ function setup() {
   
     "canvas": {
       width: windowWidth,
-      height: windowHeight
+      height: windowHeight*0.9
     },
   
     "bomb": {
