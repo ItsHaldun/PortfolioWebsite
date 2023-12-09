@@ -1,7 +1,7 @@
 TODO
 - [ ] Add other projects
 	- [x] Added 2D-Raycasting
-	- [ ] Added 2D-3D projection
+	- [x] Added 2D-3D projection
 	- [ ] Added visual-sorting
 	- [ ] Added Particle Simulator
 	- [ ] Added Crappy Bird
