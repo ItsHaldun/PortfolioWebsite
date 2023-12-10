@@ -6,6 +6,8 @@ TODO
 	- [ ] Added Particle Simulator
 	- [ ] Added Crappy Bird
 	- [ ] Added Fourier-visualization
+- [ ] All projects should have a main page that explains it
+	- [ ] Also with gifs and how-to-control etc.
 - [x] Fix minesweeper bounding boxes
 - [ ] Make the main website beautiful
 - [ ] Touch up other projects
