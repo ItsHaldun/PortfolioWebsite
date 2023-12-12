@@ -2,3 +2,35 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+ /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+ @media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+} 
+
+.parallax {
+  /* The image used */
+  background-image: url("/media/night-sky-full-moon.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: 50% 120%;
+  background-repeat: repeat;
+  background-size: cover;
+
+	text-align: center;
+}
+
+.background-text {
+	display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
