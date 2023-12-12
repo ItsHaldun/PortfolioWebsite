@@ -5,10 +5,14 @@ TODO
 	- [ ] Added visual-sorting
 	- [ ] Added Particle Simulator
 	- [ ] Added Crappy Bird
-	- [ ] Added Fourier-visualization
+	- [x] Added Fourier-visualization
+	
 - [ ] All projects should have a main page that explains it
 	- [ ] Also with gifs and how-to-control etc.
-- [x] Fix minesweeper bounding boxes
+
 - [ ] Make the main website beautiful
+	- [x] Bootstrap
+	- [x] Logo in place of home link
+
 - [ ] Touch up other projects
 - [ ] Implement wave-function collapse algorithm
