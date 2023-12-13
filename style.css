@@ -34,3 +34,72 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+
+
+/* Card Animation */
+.card {
+	transition: all 0.2s;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+
+/* Home Page Greeting Animation */
+p.glow {
+  text-shadow: 0 0 7px rgba(255,255,255,.1), 0 0 3px rgba(255,255,255,.01);
+}
+.home-animation {
+  color: #e5e5e5;
+  font-size: 4vw;
+  text-transform: uppercase;
+  height: 56vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+	margin-top:0.5rem;
+	margin-bottom:1rem;
+  height:6vw;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+  height:6vw;
+  margin-bottom: 4vw;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:rgb(32, 167, 216, 0.7);
+}
+.second div {
+  background-color:rgb(205, 146, 30, 0.7);
+}
+.third div {
+  background-color:rgb(193, 5, 40, 0.7);
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -10vw;}
+  30% {margin-top: -10vw;}
+  40% {margin-top: -20vw;}
+  60% {margin-top: -20vw;}
+  70% {margin-top: -10vw;}
+  80% {margin-top: -10vw;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
