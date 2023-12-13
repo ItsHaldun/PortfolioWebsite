@@ -109,8 +109,8 @@
 						<img src="assets/_images/projects/2d-to-3d-projection/2d-to-3d-projection-showcase.gif" class="card-img-top" alt="2d-to-3d-projection-showcase">
 						<div class="card-body">
 							<h5 class="card-title fw-bold text-primary-emphasis">2D to 3D Projection</h5>
-							<p class="card-text">My attempt to replicate how the original DOOM faked being 3-D.</p>
-							<a href="#" class="stretched-link">Click to Expand</a>
+							<p class="card-text">My attempt to replicate how the original DOOM faked being 3D.</p>
+							<a href="#modal-2d-3d-projection" data-bs-toggle="modal" class="stretched-link">Click to Expand</a>
 						</div>
 						<div class="card-footer">
 							<small class="text-body-secondary">Date Posted: 07/12/2023</small>
@@ -123,7 +123,7 @@
 						<div class="card-body">
 							<h5 class="card-title fw-bold text-primary-emphasis">2D Raycasting</h5>
 							<p class="card-text">Remade the Coding Train Coding Challenge #145.</p>
-							<a href="#" class="stretched-link">Click to Expand</a>
+							<a href="#modal-2d-raycasting" data-bs-toggle="modal" class="stretched-link">Click to Expand</a>
 						</div>
 						<div class="card-footer">
 							<small class="text-body-secondary">Date Posted: 01/12/2023</small>
@@ -135,8 +135,8 @@
 						<img src="assets/_images/projects/fourier-series/fourier-showcase.gif" class="card-img-top" alt="fourier-showcase">
 						<div class="card-body">
 							<h5 class="card-title fw-bold text-primary-emphasis">Fourier Series</h5>
-							<p class="card-text">Fourier series are fascinating! I expanded upon the Coding Train Coding Challenge #145.</p>
-							<a href="#" class="stretched-link">Click to Expand</a>
+							<p class="card-text">Fourier series are fascinating! I expanded upon the Coding Train Coding Challenge #125.</p>
+							<a href="#modal-fourier" data-bs-toggle="modal" class="stretched-link">Click to Expand</a>
 						</div>
 						<div class="card-footer">
 							<small class="text-body-secondary">Date Posted: 15/11/2023</small>
@@ -147,7 +147,6 @@
 		</div>
 
 		<!-- Modals -->
-
 		<!-- Minesweeper Modal -->
 		<div class="modal" tabindex="-1" id="modal-minesweeper">
 			<div class="modal-dialog modal-lg">
@@ -184,27 +183,73 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body ms-2 me-2">
-						<img src="assets/_images/projects/minesweeper/minesweeper-showcase.gif" alt="minesweeper-showcase" class="img-center-80">
-						<h3 class="text-center m-4">Minesweeper in Javascript</h3>
+						<img src="assets/_images/projects/2d-to-3d-projection/2d-to-3d-projection-showcase.gif" alt="2d-to-3d-projection-showcase" class="img-center-80">
+						<h3 class="text-center m-4">2D to 3D Projection</h3>
 						<h4>Summary</h4>
-						<p>The old classic time-waster, now remade to work in browsers!</p>
+						<p>Inspired by the original DOOM video game, this is my attempt to recreate 3D rendering of a 2D game.</p>
+						<h4>How it works</h4>
+						<p>Did you know that original DOOM was not entirely 3D? 
+							It had a 2D map in which the character moved around, which is why you can't look up or down, or that shooting enemies in high-ground requires no additional aiming.</p>
+						<p>How did they pull that off? I'm not sure, I actually didn't made further research on it...
+							However, I got an idea that might replicate a limited version of the effect. Here is how it works:</p>
+						<ul>
+							<li>We can cast 2D rays in front of the character and check if the rays collided with anything.</li>
+							<li>If they did, we can calculate the distance to the point of intersection (hence why all my walls are rectangles, makes it much easier).</li>
+							<li>From this distance, we can render a vertical line of colored pixels whose color and location depend on this distance.</li>
+							<li>With enough rays, the end result is a crude approximation of 3D space without actually doing any calculations in 3D!</li>
+						</ul>
 						<h4>How to play</h4>
 						<ul>
-							<li>Click on a tile to reveal it. If it's a bomb, you lose!</li>
-							<li>If it's not a bomb, the tile will show how many bombs are in its immediate vicinity.</li>
-							<li>Right click on a tile to plant a flag. Flagged tiles are safe to click and make remembering bombs trivial.</li>
-							<li>If a numbered tile has right amount of flags around it, you can press on the number to reveal the vicinity. This is called chording.</li>
-							<li>If all non-bomb tiles are revealed, you win!</li>
+							<li>Use left and right arrow buttons to rotate your character.</li>
+							<li>To move around, use up and down arrow buttons.</li>
+							<li>By adjusting the slider, you can change the number of rays casted, which essentially increases the resolution of the "render".</li>
 						</ul>
 					</div>
 					<div class="modal-footer">
-						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/minesweeper/minesweeper.html">Try it Yourself</a>
+						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/2d-to-3d-projection/2d-to-3d-projection.html">Try it Yourself</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- 2D Raycasting Modal -->
+		<div class="modal" tabindex="-1" id="modal-2d-raycasting">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body ms-2 me-2">
+						<img src="assets/_images/projects/2d-raycasting/2d-raycasting-showcase.gif" alt="2d-raycasting-showcase" class="img-center-80">
+						<h3 class="text-center m-4">2D Raycasting</h3>
+						<h4>Summary</h4>
+						<p>My attempt at the Coding Trains Coding Challenge #145, which you can find below, or watch <a target="_blank" href="https://youtu.be/TOEi6T2mtHo?feature=shared">here</a>.
+						Casting rays to get a sort of lighting effect in 2D.</p>
+						<div class="ratio ratio-16x9 mb-4">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/TOEi6T2mtHo?si=EflsNVbeChm7WH4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+						<h4>How it works</h4>
+						<ul>
+							<li>We first create rays that are centered around the mouse.</li>
+							<li>Then we check if these rays collided with anything. Our "walls" are lines, so this is essentially just a bunch of <a target="_blank" href="https://en.wikipedia.org/wiki/Intersection_(geometry)#Two_line_segments">line-segment intersections</a>.</li>
+							<li>We can draw the rays only up until their intersection.</li>
+							<li>While simple, this effect can create very sharp "shadows" and is very fun to play around with.</li>
+						</ul>
+						<h4>How to play</h4>
+						<ul>
+							<li>Just move your mouse around and see how it changes the scenery!</li>
+							<li>Refreshing the page randomizes the walls.</li>
+							<li>By adjusting the slider, you can change the number of rays casted, which essentially increases the resolution.</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/2d-raycasting/2d-raycasting.html">Try it Yourself</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Fourier Modal -->
 		<div class="modal" tabindex="-1" id="modal-fourier">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -212,49 +257,31 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body ms-2 me-2">
-						<img src="assets/_images/projects/minesweeper/minesweeper-showcase.gif" alt="minesweeper-showcase" class="img-center-80">
-						<h3 class="text-center m-4">Minesweeper in Javascript</h3>
+						<img src="assets/_images/projects/fourier-series/fourier-showcase.gif" alt="fourier-showcase" class="img-center-80">
+						<h3 class="text-center m-4">Fourier Series Visualization</h3>
 						<h4>Summary</h4>
-						<p>The old classic time-waster, now remade to work in browsers!</p>
+						<p>My attempt at the Coding Trains Coding Challenge #125, which you can find below, or watch <a target="_blank" href="https://youtu.be/Mm2eYfj0SgA?feature=shared">here</a>.
+						It is a visualization of the <a target="_blank" href="https://en.wikipedia.org/wiki/Fourier_series">fourier series</a>.
+						Coding Train explained it far better than I could, so if you are curious, check out his video. I expanded his model by adding saw tooth and triangle waves to the mix.
+					</p>
+						<div class="ratio ratio-16x9 mb-4">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/Mm2eYfj0SgA?si=9uE1FntYH-sOLnDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+						<h4>How it works</h4>
+						<ul>
+							<li>A sin wave can be thought as plotting the position of a point around a circle as it rotates vs time.</li>
+							<li>We can sum sine waves to approximate some functions, such as <a target="_blank" href="https://en.wikipedia.org/wiki/Square_wave">square waves</a>, which can be very handy.</li>
+							<li>For more details, you should check out the Coding Train video or <a target="_blank" href="https://bilimneguzellan.net/en/purrier-series-meow-and-making-images-speak/">this explaination</a>.</li>
+						</ul>
 						<h4>How to play</h4>
 						<ul>
-							<li>Click on a tile to reveal it. If it's a bomb, you lose!</li>
-							<li>If it's not a bomb, the tile will show how many bombs are in its immediate vicinity.</li>
-							<li>Right click on a tile to plant a flag. Flagged tiles are safe to click and make remembering bombs trivial.</li>
-							<li>If a numbered tile has right amount of flags around it, you can press on the number to reveal the vicinity. This is called chording.</li>
-							<li>If all non-bomb tiles are revealed, you win!</li>
+							<li>There are two sliders you can control.</li>
+							<li>One of which control which wave to approximate (square, saw tooth, or triangle)</li>
+							<li>Other one changes the number of sine waves to sum. More waves means better approximation.</li>
 						</ul>
 					</div>
 					<div class="modal-footer">
-						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/minesweeper/minesweeper.html">Try it Yourself</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Fourier Modal -->
-		<div class="modal" tabindex="-1" id="modal-minesweeper">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body ms-2 me-2">
-						<img src="assets/_images/projects/minesweeper/minesweeper-showcase.gif" alt="minesweeper-showcase" class="img-center-80">
-						<h3 class="text-center m-4">Minesweeper in Javascript</h3>
-						<h4>Summary</h4>
-						<p>The old classic time-waster, now remade to work in browsers!</p>
-						<h4>How to play</h4>
-						<ul>
-							<li>Click on a tile to reveal it. If it's a bomb, you lose!</li>
-							<li>If it's not a bomb, the tile will show how many bombs are in its immediate vicinity.</li>
-							<li>Right click on a tile to plant a flag. Flagged tiles are safe to click and make remembering bombs trivial.</li>
-							<li>If a numbered tile has right amount of flags around it, you can press on the number to reveal the vicinity. This is called chording.</li>
-							<li>If all non-bomb tiles are revealed, you win!</li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/minesweeper/minesweeper.html">Try it Yourself</a>
+						<a type="button" class="btn btn-lg btn-primary mx-auto" href="/projects/fourier-series/fourier-series.html">Try it Yourself</a>
 					</div>
 				</div>
 			</div>
