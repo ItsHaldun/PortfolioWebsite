@@ -12,7 +12,7 @@ html, body {
 
 .parallax {
   /* The image used */
-  background-image: url("/media/night-sky-full-moon.jpg");
+  background-image: url("/assets/_images/night-sky-full-moon.jpg");
 
   /* Set a specific height */
   min-height: 500px;
@@ -35,6 +35,13 @@ html, body {
   align-items: center;
 }
 
+/* Modal Images */
+.img-center-60 {
+	display: block;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 /* Card Animation */
@@ -48,7 +55,7 @@ html, body {
 .card:hover {
 	transform: scale(1.05);
 	img {
-		filter: brightness(100%);
+		filter: brightness(90%);
 	}
 }
 
