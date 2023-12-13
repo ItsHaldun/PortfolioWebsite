@@ -40,12 +40,17 @@ html, body {
 /* Card Animation */
 .card {
 	transition: all 0.2s;
+	img {
+		filter: brightness(70%);
+	}
 }
 
 .card:hover {
 	transform: scale(1.05);
+	img {
+		filter: brightness(100%);
+	}
 }
-
 
 /* Home Page Greeting Animation */
 p.glow {
