@@ -8,8 +8,9 @@ let waveText;
 let wave = [];
 
 function setup() {
+	let HEADER_OFFSET = 57;
   w = windowWidth;
-  h = windowHeight*0.92;
+  h = windowHeight-HEADER_OFFSET;
 
 	// Create the sliders
   num = createCSlider(1, 256, 1);
